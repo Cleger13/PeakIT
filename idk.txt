@@ -1,16 +1,15 @@
-from kivy.app import app
-from kivy.uix.button import Button
+#       СМЕНА ТЕМЫ      #
+import flet as flt 
 
-class Appliccation(App):
-    def build(self):
-        my_but = Button()
-        
-        return my_but
-    
-    
-    
-    
-    
+def myapp(page: flt.Page): 
+	page.theme_mode = flt.ThemeMode.DARK # change DARK to LIGHT to convert it to light mode 
+	page.window_height = 400
+	page.window_width = 500
 
-if __name__ == "__main__":
-    Appliccation().run()
+	page.title = 'GeeksApp using Flet'
+
+	page.update() 
+
+
+flt.app(target=myapp)
+
